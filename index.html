@@ -58,7 +58,7 @@ iframe.style.height = "100%";
 if (!/*@cc_on!@*/0) { //if not IE
 
 iframe.onreadystatechange = function(){
-if (iframe.readyState != "complete"){
+if (iframe.readyState == "complete"){
 alert("加载失败.");
 }
 };
