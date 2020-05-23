@@ -49,6 +49,21 @@ iframe {border: 0px;}</style>
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
+
+var iframe = document.createElement("iframe");
+iframe.src = "http://www.jb51.net";
+if (!/*@cc_on!@*/0) { //if not IE
+iframe.onload = function(){
+alert("Local iframe is now loaded.");
+};
+} else {
+iframe.onreadystatechange = function(){
+if (iframe.readyState == "complete"){
+alert("Local iframe is now loaded.");
+}
+};
+}
+document.body.appendChild(iframe);
 </script>
 </body>
 </html>
