@@ -61,7 +61,7 @@ alert("Local iframe is now loaded.");
 };
 } else {
 iframe.onreadystatechange = function(){
-if (iframe.readyState <> "complete"){
+if (iframe.readyState == "complete"){
 alert("Local iframe is now loaded.");
 }
 };
